@@ -95,27 +95,28 @@
 			<!-- Post -->
 			<article class="box post post-excerpt">
 				<header>
-					<h2>Model performance on wind farms</h2>
-					By considering the uncertainty of the raw data, I have been able to improve the model's ability
-					to accurately forecast wind power generation. This approach provides a more realistic assessment
-					of the model's performance, which can be useful in a range of practical applications.
+					<h2>12-h-ahead wind power forecasting</h2>
 
-					The following two figures demonstrate some of both good and bad performances for each wind farm.
+					<header>
+						<h3 style="font-size: 1.5em;">WindX performance:</h3>
+					</header>
+					According to the dataset description, there is an uncertainty in the raw data, as shown in the
+					following figure. Incorporating this uncertainty provides a more realistic assessment of the model's
+					performance, which can be useful in a range of practical applications. However, it should be noted
+					that in the subsequent steps, the uncertainty is not taken into account for the numerical results
+					provided in the tables and other images and it is only being considered in this figure for
+					illustrative purposes.
 				</header>
-				<p>
-					<strong>First wind farm:</strong>
-				</p>
 				<a href="#" class="image featured"><img src="images/windx/farm_1_pred.jpg" alt="" /></a>
-				<p>
-					<strong>Second wind farm:</strong>
-				</p>
 				<a href="#" class="image featured"><img src="images/windx/farm_2_pred.jpg" alt="" /></a>
-			</article>
-
-			<!-- Post -->
-			<article class="box post post-excerpt">
 				<header>
-					<h2>Performance of different baselines on 12-h-ahead wind power forecasting</h2>
+					<h3 style="font-size: 1.5em;">Error divergence of MSE metric on 12-h-ahead wind power forecasting
+						for different baseline algorithms:
+					</h3>
+				</header>
+				<a href="#" class="image featured"><img src="images/windx/Error_divergence.jpg" alt="" /></a>
+				<header>
+					<h3 style="font-size: 1.5em;">Detailed result for 12-h-ahead forecasting:</h3>
 				</header>
 				<table style="width: 50%;">
 					<tr>
@@ -189,7 +190,10 @@
 			<!-- Post -->
 			<article class="box post post-excerpt">
 				<header>
-					<h2>Performance of different baselines 1-h-ahead wind power forecasting</h2>
+					<h2>1-h-ahead wind power forecasting</h2>
+				</header>
+				<header>
+					<h3 style="font-size: 1.5em;">Detailed result for 1-h-ahead forecasting:</h3>
 				</header>
 				<table>
 					<tr>
@@ -264,6 +268,15 @@
 					</tr>
 				</table>
 			</article>
+
+			<article class="box post post-excerpt">
+				<header>
+					<h3 style="font-size: 1.5em;">Models' ranking based on MSE and MAE metrics:</h3>
+				</header>
+
+				<a href="#" class="image featured"><img src="images/windx/MSE_vs_MAE.jpg" alt="" /></a>
+
+			</article>
 			<article class="box post post-excerpt">
 				<ul class="actions">
 					<li><a href="index.html" class="button">Home page</a></li>
@@ -287,7 +300,6 @@
 				<li><a href="https://www.linkedin.com/in/farzad-roozitalab-173066152/">Contact Me</a></li>
 			</ul>
 		</nav>
-
 		<!-- Search -->
 		<!-- <section class="box search">
 			<form method="post" action="#">
