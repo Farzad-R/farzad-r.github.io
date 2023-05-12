@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<!--
+	Striped by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>windx</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/windx_main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Content -->
+	<div id="content">
+		<div class="inner">
+
+			<!-- Post -->
+			<article class="box post post-excerpt">
+				<header>
+					<!--
+									Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+									if they get too long. You can also remove the <p> entirely if you don't
+									need a subtitle.
+								-->
+					<h2><a href="#">WindX: Short-term and Mid-term Wind Power Prediction using Real-world Data</a></h2>
+					<p>Author: Farzad Roozitalab</p>
+					Welcome to my web page showcasing my wind power forecasting model. Please note that the name "WindX"
+					is a temporary placeholder and does not represent the final name of the model. Additionally, I have
+					not included technical details of the model architecture in this report as the framework is
+					currently undergoing the review process for publication and also the process of becoming a patent.
+					As soon as the paperwork process is complete, I will provide further updates and technical details
+					about the model. </br>
+
+					The purpose of this report is to showcase the performance of my wind power forecasting model on two
+					active wind farms located in Ontario, Canada. These wind farms serve as benchmarks to evaluate the
+					accuracy and reliability of the model's forecasting capabilities.
+				</header>
+				<a href="#" class="image featured"><img src="images/windx/wind_cover.jpg" alt="" /></a>
+
+				<p>
+					<strong>Wind power forecasting </strong>(WPF) is a challenging time-series forecasting task due to
+					the non-linear, dynamic nature of wind farms and the chaotic nature of atmospheric
+					wind speeds and directions. Previous studies have often relied on proprietary,
+					facility-specific wind farm data to advance WPF models. However, for the first project for my PhD,
+					I developed a new framework and a new deep learning architecture
+					that does not take ane of those inputs except the average wind farm's output power and yet it is
+					capable of capturing complex patterns in the data. WindX
+					significantly outperforms state-of-the-art deep learning time-series forecasting models,
+					like <a href="https://arxiv.org/pdf/1703.07015.pdf">LSTNet</a> and <a
+						href="https://arxiv.org/pdf/2201.12740.pdf">FEDformer</a>, as well
+					as the industry standard forecast model utilized by the <a href="https://www.ieso.ca/">Independent
+						Electricity System Operator</a> (IESO). WindX achieves an average 75.8% improvement
+					over competitive models, with an average MSE of 0.0053 on a 12-hour-ahead
+					WPF, and an average 1-hour-ahead MSE of 0.001. The result of model interpretation using the
+					Integrated Gradients will be added to this report as well. In addition to superior predictive
+					accuracy, the model is
+					more computationally efficient than competitors and has the potential to drastically
+					improve wind power deployment and achievement of net-zero greenhouse gas
+					emission goals.
+				</p>
+			</article>
+
+			<!-- Post -->
+			<article class="box post post-excerpt">
+				<header>
+					<h2><a href="#">Model performance on wind farms</a></h2>
+					By considering the uncertainty of the raw data, I have been able to improve the model's ability
+					to accurately forecast wind power generation. This approach provides a more realistic assessment
+					of the model's performance, which can be useful in a range of practical applications.
+
+					The following two figures demonstrate some of both good and bad performances for each wind farm.
+				</header>
+				<p>
+					<strong>First wind farm:</strong>
+				</p>
+				<a href="#" class="image featured"><img src="images/windx/farm_1_pred.jpg" alt="" /></a>
+				<p>
+					<strong>Second wind farm:</strong>
+				</p>
+				<a href="#" class="image featured"><img src="images/windx/farm_2_pred.jpg" alt="" /></a>
+			</article>
+
+			<!-- Post -->
+			<article class="box post post-excerpt">
+				<header>
+					<h2>MPerformance of different baselines on 12-h-ahead wind power forecasting</h2>
+				</header>
+				<table style="width: 50%;">
+					<tr>
+						<td>Algorithms</td>
+						<td></td>
+						<td>WindX</td>
+						<td><a href="https://ieeexplore.ieee.org/document/9112272">C1LSTMAtt</a></td>
+						<td>C2LSTM</td>
+						<td>LSTM</td>
+						<td><a href="https://arxiv.org/pdf/1703.07015.pdf">LSTNet</a></td>
+						<td><a href="https://arxiv.org/pdf/1704.02971.pdf">DA_RNN</a></td>
+						<td><a href="https://arxiv.org/pdf/2012.07436.pdf">Informer</a></td>
+						<td><a href="https://arxiv.org/pdf/2201.12740.pdf">FEDformer</a></td>
+						<td><a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer</a></td>
+					</tr>
+					<tr>
+						<td>WindFarm_1</td>
+						<td>MSE</td>
+						<td><strong>0.0037</strong></td>
+						<td>0.0245</td>
+						<td>0.0289</td>
+						<td>0.0247</td>
+						<td>0.0251</td>
+						<td>0.0277</td>
+						<td>0.0347</td>
+						<td>0.0374</td>
+						<td>0.0295</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>MAE</td>
+						<td><strong>0.0312</strong></td>
+						<td>0.113</td>
+						<td>0.1263</td>
+						<td>0.1145</td>
+						<td>0.1145</td>
+						<td>0.1239</td>
+						<td>0.1407</td>
+						<td>0.1504</td>
+						<td>0.1294</td>
+					</tr>
+					<tr>
+						<td>WindFarm_2</td>
+						<td>MSE</td>
+						<td><strong>0.006</strong></td>
+						<td>0.0396</td>
+						<td>0.0444</td>
+						<td>0.0397</td>
+						<td>0.0394</td>
+						<td>0.0449</td>
+						<td>0.0577</td>
+						<td>0.0665</td>
+						<td>0.0483</td>
+					</tr>
+					</tr>
+					<tr>
+						<td></td>
+						<td>MAE</td>
+						<td><strong>0.040</strong></td>
+						<td>0.150</td>
+						<td>0.1632</td>
+						<td>0.1495</td>
+						<td>0.1490</td>
+						<td>0.1634</td>
+						<td>0.1912</td>
+						<td>0.2121</td>
+						<td>0.1719</td>
+					</tr>
+				</table>
+			</article>
+
+			<article class="box post post-excerpt">
+				<header>
+					<h2>Performance of different baselines 1-h-ahead wind power forecasting</h2>
+				</header>
+				<table>
+					<tr>
+						<td>Algorithms</td>
+						<td></td>
+						<td><a href="https://www.ieso.ca/">IESO</a></td>
+						<td>WindX</td>
+						<td><a href="https://ieeexplore.ieee.org/document/9112272">C1LSTMAtt</a></td>
+						<td>C2LSTM</td>
+						<td>LSTM</td>
+						<td><a href="https://arxiv.org/pdf/1703.07015.pdf">LSTNet</a></td>
+						<td><a href="https://arxiv.org/pdf/1704.02971.pdf">DA_RNN</a></td>
+						<td><a href="https://arxiv.org/pdf/2012.07436.pdf">Informer</a></td>
+						<td><a href="https://arxiv.org/pdf/2201.12740.pdf">FEDformer</a></td>
+						<td><a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer</a></td>
+					</tr>
+					<tr>
+						<td>WindFarm_1</td>
+						<td>MSE</td>
+						<td>0.0021</td>
+						<td><strong>0.0006</strong></td>
+						<td>0.0058</td>
+						<td>0.0083</td>
+						<td>0.0052</td>
+						<td>0.0053</td>
+						<td>0.0072</td>
+						<td>0.0095</td>
+						<td>0.0230</td>
+						<td>0.0201</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>MAE</td>
+						<td>0.0195</td>
+						<td><strong>0.0174</strong></td>
+						<td>0.0532</td>
+						<td>0.0665</td>
+						<td>0.0495</td>
+						<td>0.0500</td>
+						<td>0.0622</td>
+						<td>0.0688</td>
+						<td>0.1174</td>
+						<td>0.1085</td>
+					</tr>
+					<tr>
+						<td>WindFarm_2</td>
+						<td>MSE</td>
+						<td>0.0043</td>
+						<td><strong>0.0008</strong></td>
+						<td>0.0107</td>
+						<td>0.0118</td>
+						<td>0.0086</td>
+						<td>0.0088</td>
+						<td>0.0117</td>
+						<td>0.0209</td>
+						<td>0.0483</td>
+						<td>0.0110</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>MAE</td>
+						<td>0.0246</td>
+						<td><strong>0.0198</strong></td>
+						<td>0.0742</td>
+						<td>0.0799</td>
+						<td>0.0635</td>
+						<td>0.0640</td>
+						<td>0.0777</td>
+						<td>0.1076</td>
+						<td>0.1802</td>
+						<td>0.0782</td>
+					</tr>
+				</table>
+			</article>
+			<article class="box post post-excerpt">
+				<ul class="actions">
+					<li><a href="index.html" class="button">Home page</a></li>
+				</ul>
+			</article>
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+
+		<!-- Logo -->
+		<h1 id="logo"><a href="#">Portfolio</a></h1>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<!-- <li class="current"><a href="#">Latest Post</a></li> -->
+				<!-- <li><a href="#">Archives</a></li> -->
+				<li><a href="index.html">About Me</a></li>
+				<li><a href="https://www.linkedin.com/in/farzad-roozitalab-173066152/">Contact Me</a></li>
+			</ul>
+		</nav>
+
+		<!-- Search -->
+		<!-- <section class="box search">
+			<form method="post" action="#">
+				<input type="text" class="text" name="search" placeholder="Search" />
+			</form>
+		</section> -->
+
+		<!-- Text -->
+		<!-- <section class="box text-style1">
+			<div class="inner">
+				<p>
+					<strong>Striped:</strong> A free and fully responsive HTML5 site
+					template designed by <a href="http://twitter.com/ajlkn">AJ</a> for <a
+						href="http://html5up.net/">HTML5 UP</a>
+				</p>
+			</div>
+		</section> -->
+
+		<!-- Recent Posts -->
+		<!-- <section class="box recent-posts">
+			<header>
+				<h2>Recent Posts</h2>
+			</header>
+			<ul>
+				<li><a href="#">Lorem ipsum dolor</a></li>
+				<li><a href="#">Feugiat nisl aliquam</a></li>
+				<li><a href="#">Sed dolore magna</a></li>
+				<li><a href="#">Malesuada commodo</a></li>
+				<li><a href="#">Ipsum metus nullam</a></li>
+			</ul>
+		</section> -->
+
+		<!-- Recent Comments -->
+		<!-- <section class="box recent-comments">
+			<header>
+				<h2>Recent Comments</h2>
+			</header>
+			<ul>
+				<li>case on <a href="#">Lorem ipsum dolor</a></li>
+				<li>molly on <a href="#">Sed dolore magna</a></li>
+				<li>case on <a href="#">Sed dolore magna</a></li>
+			</ul>
+		</section> -->
+
+		<!-- Calendar
+		<section class="box calendar">
+			<div class="inner">
+				<table>
+					<caption>July 2014</caption>
+					<thead>
+						<tr>
+							<th scope="col" title="Monday">M</th>
+							<th scope="col" title="Tuesday">T</th>
+							<th scope="col" title="Wednesday">W</th>
+							<th scope="col" title="Thursday">T</th>
+							<th scope="col" title="Friday">F</th>
+							<th scope="col" title="Saturday">S</th>
+							<th scope="col" title="Sunday">S</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4" class="pad"><span>&nbsp;</span></td>
+							<td><span>1</span></td>
+							<td><span>2</span></td>
+							<td><span>3</span></td>
+						</tr>
+						<tr>
+							<td><span>4</span></td>
+							<td><span>5</span></td>
+							<td><a href="#">6</a></td>
+							<td><span>7</span></td>
+							<td><span>8</span></td>
+							<td><span>9</span></td>
+							<td><a href="#">10</a></td>
+						</tr>
+						<tr>
+							<td><span>11</span></td>
+							<td><span>12</span></td>
+							<td><span>13</span></td>
+							<td class="today"><a href="#">14</a></td>
+							<td><span>15</span></td>
+							<td><span>16</span></td>
+							<td><span>17</span></td>
+						</tr>
+						<tr>
+							<td><span>18</span></td>
+							<td><span>19</span></td>
+							<td><span>20</span></td>
+							<td><span>21</span></td>
+							<td><span>22</span></td>
+							<td><a href="#">23</a></td>
+							<td><span>24</span></td>
+						</tr>
+						<tr>
+							<td><a href="#">25</a></td>
+							<td><span>26</span></td>
+							<td><span>27</span></td>
+							<td><span>28</span></td>
+							<td class="pad" colspan="3"><span>&nbsp;</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section> -->
+
+		<!-- Copyright -->
+		<!-- <ul id="copyright">
+			<li>&copy; Untitled.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul> -->
+
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
