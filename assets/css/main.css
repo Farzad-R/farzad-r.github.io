@@ -189,6 +189,7 @@ body.is-preload *:after {
 	transition: none !important;
 }
 
+
 body,
 input,
 select,
@@ -2773,6 +2774,7 @@ input[type="button"]:disabled,
 	font-size: 1.35em;
 	line-height: 1.75em;
 	margin: 0;
+	text-align: left;
 }
 
 /* this width will change the size of the avatar. */
