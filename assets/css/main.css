@@ -2769,17 +2769,23 @@ input[type="button"]:disabled,
 	color: #ffffff;
 }
 
+#header .inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 #header h1 {
 	color: rgba(255, 255, 255, 0.5);
 	font-size: 1.35em;
 	line-height: 1.75em;
 	margin: 0;
-	text-align: left;
+	text-align: center;
 }
 
-/* this width will change the size of the avatar. */
 #header .image.avatar {
-	margin: 0 0 1em 0;
+	margin-bottom: 3em;
 	width: 14em;
 }
 
