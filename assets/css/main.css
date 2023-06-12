@@ -380,6 +380,26 @@ pre code {
 	width: 100%;
 }
 
+#dobulecolumn-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+}
+
+.column {
+	padding: 0;
+}
+
+.no-spacing {
+	margin: 0;
+	padding: 0;
+	padding-left: 0;
+}
+
+.no-spacing li:not(:first-child) {
+	margin-top: 1em;
+}
+
 @media screen and (max-width: 980px) {
 
 	.container {
