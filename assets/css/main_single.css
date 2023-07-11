@@ -3738,3 +3738,13 @@ body.is-menu-visible #menu {
 	}
 
 }
+
+#dobulecolumn-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+}
+
+.column {
+	padding: 0;
+}
